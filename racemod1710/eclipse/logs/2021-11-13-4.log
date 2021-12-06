@@ -1,0 +1,71 @@
+[11:37:47] [main/INFO]: Setting user: Player446
+[11:37:48] [Client thread/INFO]: LWJGL Version: 2.9.1
+[11:37:53] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:race-mod
+[11:37:54] [Sound Library Loader/INFO]: Sound engine started
+[11:37:55] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[11:37:55] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[11:37:55] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:race-mod
+[11:37:55] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[11:37:55] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[11:37:56] [Sound Library Loader/INFO]: Sound engine started
+[11:38:01] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[11:38:01] [Server thread/INFO]: Generating keypair
+[11:38:01] [Server thread/INFO]: Converting map!
+[11:38:01] [Server thread/INFO]: Scanning folders...
+[11:38:01] [Server thread/INFO]: Total conversion count is 0
+[11:38:01] [Server thread/INFO]: Preparing start region for level 0
+[11:38:02] [Server thread/INFO]: Preparing spawn area: 14%
+[11:38:03] [Server thread/INFO]: Preparing spawn area: 32%
+[11:38:04] [Server thread/INFO]: Preparing spawn area: 55%
+[11:38:05] [Server thread/INFO]: Preparing spawn area: 83%
+[11:38:06] [Server thread/INFO]: Changing view distance to 12, from 10
+[11:38:06] [Server thread/INFO]: Player446[local:E:4800dedc] logged in with entity id 152 at (-119.5, 64.0, 210.5)
+[11:38:06] [Server thread/INFO]: Player446 joined the game
+[11:38:07] [Server thread/INFO]: Player446 has just earned the achievement [Taking Inventory]
+[11:38:07] [Client thread/INFO]: [CHAT] Player446 has just earned the achievement [Taking Inventory]
+[11:38:10] [Client thread/INFO]: Warning: Clientside chunk ticking took 127 ms
+[11:38:21] [Server thread/INFO]: Saving and pausing game...
+[11:38:21] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[11:38:21] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[11:38:21] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+[11:42:35] [Client thread/INFO]: Stopping!
+[11:42:35] [Server thread/INFO]: Stopping server
+[11:42:35] [Server thread/INFO]: Saving players
+[11:42:35] [Server thread/INFO]: Saving worlds
+[11:42:35] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[11:42:35] [Server thread/WARN]: The save is being accessed from another location, aborting
+[11:42:35] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[11:42:35] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+r, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:race-mod
+[11:42:22] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[11:42:22] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[11:42:23] [Sound Library Loader/INFO]: Sound engine started
+[11:42:26] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[11:42:26] [Server thread/INFO]: Generating keypair
+[11:42:26] [Server thread/INFO]: Converting map!
+[11:42:26] [Server thread/INFO]: Scanning folders...
+[11:42:26] [Server thread/INFO]: Total conversion count is 0
+[11:42:27] [Server thread/INFO]: Preparing start region for level 0
+[11:42:28] [Server thread/INFO]: Preparing spawn area: 11%
+[11:42:29] [Server thread/INFO]: Preparing spawn area: 27%
+[11:42:30] [Server thread/INFO]: Preparing spawn area: 51%
+[11:42:31] [Server thread/INFO]: Preparing spawn area: 76%
+[11:42:32] [Server thread/INFO]: Changing view distance to 12, from 10
+[11:42:32] [Server thread/INFO]: Player340[local:E:02dc70d3] logged in with entity id 152 at (-119.5, 64.0, 210.5)
+[11:42:32] [Server thread/INFO]: Player340 joined the game
+[11:42:33] [Server thread/INFO]: Saving and pausing game...
+[11:42:33] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[11:42:38] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[11:42:38] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+[11:42:39] [Server thread/INFO]: Player340 has just earned the achievement [Taking Inventory]
+[11:42:39] [Client thread/INFO]: [CHAT] Player340 has just earned the achievement [Taking Inventory]
+[11:42:39] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 6024ms behind, skipping 120 tick(s)
+[11:42:43] [Client thread/INFO]: Warning: Clientside chunk ticking took 149 ms
+[11:42:49] [Server thread/INFO]: Saving and pausing game...
+[11:42:49] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[11:42:50] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[11:42:50] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+[11:43:01] [Server thread/INFO]: Saving and pausing game...
+[11:43:01] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[11:43:01] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[11:43:01] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End

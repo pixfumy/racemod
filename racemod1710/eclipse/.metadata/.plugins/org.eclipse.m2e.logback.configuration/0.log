@@ -69,3 +69,6 @@ request: http://search.maven.org/solrsearch/select?q=1:"9fd1592e9513ffb63980884f
 	at org.apache.solr.client.solrj.impl.CommonsHttpSolrServer.request(CommonsHttpSolrServer.java:246) ~[org.apache.solr.client.solrj_3.5.0.v20120530-0900.jar:na]
 	at org.apache.solr.client.solrj.request.QueryRequest.process(QueryRequest.java:89) ~[na:na]
 	... 59 common frames omitted
+2021-12-19 04:20:39,229 [main] WARN  o.e.r.c.r.p.ProcessableProposalFactory - Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocLinkTypeCompletionProposal' ('{@link } - scala.util.control.Breaks'). Returning original proposal instead.
+2021-12-19 04:20:39,233 [main] WARN  o.e.r.c.r.p.ProcessableProposalFactory - Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocLinkTypeCompletionProposal' ('{@link BreakSpeed} - net.minecraftforge.event.entity.player.PlayerEvent'). Returning original proposal instead.
+2021-12-19 04:20:39,234 [main] WARN  o.e.r.c.r.p.ProcessableProposalFactory - Unknown JDT proposal type 'class org.eclipse.jdt.internal.ui.text.javadoc.JavadocLinkTypeCompletionProposal' ('{@link Breaks} - scala.util.control'). Returning original proposal instead.

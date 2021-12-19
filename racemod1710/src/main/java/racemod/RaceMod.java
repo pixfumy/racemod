@@ -11,5 +11,6 @@
    public void init(FMLInitializationEvent event) {
        MinecraftForge.EVENT_BUS.register(new LivingDropsEventHandler());
 	   MinecraftForge.EVENT_BUS.register(new EnderEyeBreakEventHandler());
+	   MinecraftForge.EVENT_BUS.register(new BedrockEventHandler());
    }
 }

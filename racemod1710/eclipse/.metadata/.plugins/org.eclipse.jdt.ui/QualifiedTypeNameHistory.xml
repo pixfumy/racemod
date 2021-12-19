@@ -2,4 +2,27 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="net.minecraft.world.WorldSavedData"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerUseItemEvent"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.eventhandler.SubscribeEvent"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.item.ItemEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerUseItemEvent.Start"/>
+<fullyQualifiedTypeName name="com.sun.media.jfxmedia.events.PlayerEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerDestroyItemEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.living.LivingEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerOpenContainerEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerInteractEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.item.ItemTossEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.world.BlockEvent"/>
+<fullyQualifiedTypeName name="net.minecraft.block.BlockSkull"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.world.BlockEvent.PlaceEvent"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemBlock"/>
+<fullyQualifiedTypeName name="net.minecraft.block.Block"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="net.minecraft.client.Minecraft"/>
+<fullyQualifiedTypeName name="net.minecraft.util.IChatComponent"/>
+<fullyQualifiedTypeName name="net.minecraft.network.Packet"/>
+<fullyQualifiedTypeName name="scala.util.control.Breaks"/>
+<fullyQualifiedTypeName name="net.minecraft.client.entity.EntityPlayerSP"/>
 </qualifiedTypeNameHistroy>

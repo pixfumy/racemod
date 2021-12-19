@@ -1,60 +1,144 @@
-[11:52:11] [main/INFO]: Setting user: Player576
-[11:52:12] [Client thread/INFO]: LWJGL Version: 2.9.1
-[11:52:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:race-mod
-[11:52:18] [Sound Library Loader/INFO]: Sound engine started
-[11:52:19] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[11:52:19] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[11:52:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:race-mod
-[11:52:19] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[11:52:19] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[11:52:20] [Sound Library Loader/INFO]: Sound engine started
-[11:52:23] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[11:52:23] [Server thread/INFO]: Generating keypair
-[11:52:23] [Server thread/INFO]: Converting map!
-[11:52:23] [Server thread/INFO]: Scanning folders...
-[11:52:23] [Server thread/INFO]: Total conversion count is 0
-[11:52:24] [Server thread/INFO]: Preparing start region for level 0
-[11:52:25] [Server thread/INFO]: Preparing spawn area: 12%
-[11:52:26] [Server thread/INFO]: Preparing spawn area: 31%
-[11:52:27] [Server thread/INFO]: Preparing spawn area: 54%
-[11:52:28] [Server thread/INFO]: Preparing spawn area: 80%
-[11:52:29] [Server thread/INFO]: Changing view distance to 12, from 10
-[11:52:29] [Server thread/INFO]: Player576[local:E:f3945622] logged in with entity id 152 at (-119.5, 64.0, 210.5)
-[11:52:29] [Server thread/INFO]: Player576 joined the game
-[11:52:30] [Server thread/INFO]: Player576 has just earned the achievement [Taking Inventory]
-[11:52:30] [Client thread/INFO]: [CHAT] Player576 has just earned the achievement [Taking Inventory]
-[11:53:14] [Server thread/INFO]: Saving and pausing game...
-[11:53:14] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
-[11:53:15] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
-[11:53:15] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
-[11:53:22] [Server thread/INFO]: Stopping server
-[11:53:22] [Server thread/INFO]: Saving players
-[11:53:22] [Server thread/INFO]: Saving worlds
-[11:53:22] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
-[11:53:22] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
-[11:53:22] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
-[11:53:24] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[11:53:24] [Server thread/INFO]: Generating keypair
-[11:53:24] [Server thread/INFO]: Converting map!
-[11:53:24] [Server thread/INFO]: Scanning folders...
-[11:53:24] [Server thread/INFO]: Total conversion count is 0
-[11:53:24] [Server thread/INFO]: Preparing start region for level 0
-[11:53:25] [Server thread/INFO]: Preparing spawn area: 35%
-[11:53:26] [Server thread/INFO]: Preparing spawn area: 65%
-[11:53:27] [Server thread/INFO]: Preparing spawn area: 95%
-[11:53:27] [Server thread/INFO]: Changing view distance to 12, from 10
-[11:53:27] [Server thread/INFO]: Player576[local:E:5fcf7389] logged in with entity id 10338 at (-119.5, 64.0, 210.5)
-[11:53:27] [Server thread/INFO]: Player576 joined the game
-[11:53:28] [Server thread/INFO]: Player576 has just earned the achievement [Taking Inventory]
-[11:53:28] [Client thread/INFO]: [CHAT] Player576 has just earned the achievement [Taking Inventory]
-[11:54:35] [Server thread/INFO]: Saving and pausing game...
-[11:54:35] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
-[11:54:35] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
-[11:54:35] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
-[11:54:35] [Server thread/INFO]: Stopping server
-[11:54:35] [Server thread/INFO]: Saving players
-[11:54:35] [Server thread/INFO]: Saving worlds
-[11:54:35] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
-[11:54:35] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
-[11:54:35] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
-[11:54:40] [Client thread/INFO]: Stopping!
+[05:03:00] [main/INFO]: Setting user: Player968
+[05:03:00] [Client thread/INFO]: LWJGL Version: 2.9.1
+[05:03:06] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Race Mod
+[05:03:07] [Sound Library Loader/INFO]: Sound engine started
+[05:03:08] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[05:03:08] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[05:03:08] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Race Mod
+[05:03:09] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[05:03:09] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[05:03:09] [Sound Library Loader/INFO]: Sound engine started
+[05:03:13] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[05:03:13] [Server thread/INFO]: Generating keypair
+[05:03:13] [Server thread/INFO]: Converting map!
+[05:03:13] [Server thread/INFO]: Scanning folders...
+[05:03:13] [Server thread/INFO]: Total conversion count is 0
+[05:03:13] [Server thread/INFO]: Preparing start region for level 0
+[05:03:14] [Server thread/INFO]: Preparing spawn area: 13%
+[05:03:15] [Server thread/INFO]: Preparing spawn area: 32%
+[05:03:16] [Server thread/INFO]: Preparing spawn area: 53%
+[05:03:17] [Server thread/INFO]: Preparing spawn area: 76%
+[05:03:18] [Server thread/INFO]: Changing view distance to 12, from 10
+[05:03:19] [Server thread/INFO]: Player968[local:E:9764d8aa] logged in with entity id 219 at (-64.5, 66.0, 248.5)
+[05:03:19] [Server thread/INFO]: Player968 joined the game
+[05:03:20] [Server thread/INFO]: Player968 has just earned the achievement [Taking Inventory]
+[05:03:20] [Client thread/INFO]: [CHAT] Player968 has just earned the achievement [Taking Inventory]
+[05:03:30] [Client thread/INFO]: Warning: Clientside chunk ticking took 311 ms
+[05:03:31] [Client thread/INFO]: Warning: Clientside chunk ticking took 334 ms
+[05:03:31] [Client thread/INFO]: Warning: Clientside chunk ticking took 332 ms
+[05:03:32] [Client thread/INFO]: Warning: Clientside chunk ticking took 334 ms
+[05:03:32] [Client thread/INFO]: Warning: Clientside chunk ticking took 335 ms
+[05:03:33] [Client thread/INFO]: Warning: Clientside chunk ticking took 336 ms
+[05:03:34] [Server thread/INFO]: <Player968> Blaze rates are 6/18, Endermen rates are 12/16, eye breaks are 1/5
+[05:03:34] [Client thread/INFO]: [CHAT] <Player968> Blaze rates are 6/18, Endermen rates are 12/16, eye breaks are 1/5
+[05:03:47] [Server thread/INFO]: [Player968: Set the time to 14000]
+[05:03:47] [Client thread/INFO]: [CHAT] Set the time to 14000
+[05:04:46] [Server thread/INFO]: [Player968: Set the time to 0]
+[05:04:46] [Client thread/INFO]: [CHAT] Set the time to 0
+[05:04:53] [Server thread/INFO]: Saving and pausing game...
+[05:04:53] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[05:04:53] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[05:04:53] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+[05:04:53] [Server thread/INFO]: Saving and pausing game...
+[05:04:53] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[05:04:53] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[05:04:53] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+[05:05:02] [Server thread/INFO]: [Player968: Set the time to 14000]
+[05:05:02] [Client thread/INFO]: [CHAT] Set the time to 14000
+[05:05:34] [Server thread/INFO]: Saving and pausing game...
+[05:05:34] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[05:05:34] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[05:05:34] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+[05:05:34] [Server thread/INFO]: Saving and pausing game...
+[05:05:34] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[05:05:34] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[05:05:34] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+[05:05:37] [Server thread/INFO]: Saving and pausing game...
+[05:05:37] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[05:05:38] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[05:05:38] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+[05:05:39] [Server thread/INFO]: Stopping server
+[05:05:39] [Server thread/INFO]: Saving players
+[05:05:39] [Server thread/INFO]: Saving worlds
+[05:05:39] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Overworld
+[05:05:39] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/Nether
+[05:05:39] [Server thread/INFO]: Saving chunks for level 'Copy of Copy of Copy of Copy of'/The End
+[05:05:45] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[05:05:45] [Server thread/INFO]: Generating keypair
+[05:05:45] [Server thread/INFO]: Converting map!
+[05:05:45] [Server thread/INFO]: Scanning folders...
+[05:05:45] [Server thread/INFO]: Total conversion count is 0
+[05:05:45] [Server thread/INFO]: Preparing start region for level 0
+[05:05:46] [Server thread/INFO]: Preparing spawn area: 37%
+[05:05:47] [Server thread/INFO]: Preparing spawn area: 69%
+[05:05:48] [Server thread/INFO]: Changing view distance to 12, from 10
+[05:05:48] [Server thread/INFO]: Player968[local:E:5e193fe3] logged in with entity id 17672 at (173.5, 69.0, 247.5)
+[05:05:48] [Server thread/INFO]: Player968 joined the game
+[05:06:01] [Server thread/INFO]: Player968 has just earned the achievement [Taking Inventory]
+[05:06:01] [Client thread/INFO]: [CHAT] Player968 has just earned the achievement [Taking Inventory]
+[05:06:07] [Server thread/INFO]: <Player968> Blaze rates are 6/12, Endermen rates are 12/17, eye breaks are 2/5
+[05:06:07] [Client thread/INFO]: [CHAT] <Player968> Blaze rates are 6/12, Endermen rates are 12/17, eye breaks are 2/5
+[05:06:32] [Server thread/INFO]: Saving and pausing game...
+[05:06:32] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[05:06:32] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[05:06:32] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[05:07:05] [Server thread/INFO]: [Player968: Set the time to 14000]
+[05:07:05] [Client thread/INFO]: [CHAT] Set the time to 14000
+[05:07:33] [Server thread/INFO]: Saving and pausing game...
+[05:07:33] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[05:07:33] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[05:07:33] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[05:07:34] [Server thread/INFO]: Saving and pausing game...
+[05:07:34] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[05:07:34] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[05:07:34] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[05:08:21] [Server thread/INFO]: Saving and pausing game...
+[05:08:21] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[05:08:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[05:08:21] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[05:08:21] [Server thread/INFO]: Saving and pausing game...
+[05:08:21] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[05:08:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[05:08:21] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[05:08:23] [Server thread/INFO]: Saving and pausing game...
+[05:08:23] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[05:08:23] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[05:08:23] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[05:08:25] [Server thread/INFO]: Saving and pausing game...
+[05:08:25] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[05:08:25] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[05:08:25] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[05:08:26] [Server thread/INFO]: Saving and pausing game...
+[05:08:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[05:08:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[05:08:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[05:08:28] [Server thread/INFO]: Stopping server
+[05:08:28] [Server thread/INFO]: Saving players
+[05:08:28] [Server thread/INFO]: Saving worlds
+[05:08:28] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[05:08:28] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[05:08:28] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[05:08:31] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[05:08:31] [Server thread/INFO]: Generating keypair
+[05:08:31] [Server thread/INFO]: Converting map!
+[05:08:31] [Server thread/INFO]: Scanning folders...
+[05:08:31] [Server thread/INFO]: Total conversion count is 0
+[05:08:31] [Server thread/INFO]: Preparing start region for level 0
+[05:08:32] [Server thread/INFO]: Preparing spawn area: 39%
+[05:08:33] [Server thread/INFO]: Preparing spawn area: 72%
+[05:08:34] [Server thread/INFO]: Changing view distance to 12, from 10
+[05:08:34] [Server thread/INFO]: Player968[local:E:5f302429] logged in with entity id 31201 at (173.5, 69.0, 247.5)
+[05:08:34] [Server thread/INFO]: Player968 joined the game
+[05:08:37] [Server thread/INFO]: Player968 has just earned the achievement [Taking Inventory]
+[05:08:37] [Client thread/INFO]: [CHAT] Player968 has just earned the achievement [Taking Inventory]
+[05:08:58] [Server thread/INFO]: Saving and pausing game...
+[05:08:58] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Overworld
+[05:08:59] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Nether
+[05:08:59] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/The End
+[05:08:59] [Server thread/INFO]: Stopping server
+[05:08:59] [Server thread/INFO]: Saving players
+[05:08:59] [Server thread/INFO]: Saving worlds
+[05:08:59] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Overworld
+[05:08:59] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/Nether
+[05:08:59] [Server thread/INFO]: Saving chunks for level 'Copy of New World'/The End
+[05:09:12] [Client thread/INFO]: Stopping!

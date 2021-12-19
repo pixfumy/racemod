@@ -1,7 +1,15 @@
 package racemod;
 
 import java.util.Random;
+
+import scala.util.control.Breaks;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityClientPlayerMP;
+import net.minecraft.entity.item.EntityItem;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldSavedData;
 import net.minecraft.world.storage.MapStorage;
@@ -30,7 +38,7 @@ public class ExampleWorldSavedData extends WorldSavedData
     this.pearlSeed = world.getSeed() ^ 0x11101010L;
     this.featherSeed = world.getSeed() ^ 0x1111101101000010L;
     this.rodSeed = world.getSeed() ^ 0xF111B7010L;
-	  this.eyeSeed = world.getSeed() ^ 0x99A2B75BBL;
+	this.eyeSeed = world.getSeed() ^ 0x99A2B75BBL;
     int i;
     for (i = 0; i < 17; i++)
     {
@@ -46,9 +54,9 @@ public class ExampleWorldSavedData extends WorldSavedData
     {
       updateRodSeed();
     }
-	  for (i = 0; i < 24; i++) {
+	for (i = 0; i < 24; i++) {
 		  updateEyeSeed();
-	  }
+	}
   }
 
   
@@ -142,5 +150,52 @@ public class ExampleWorldSavedData extends WorldSavedData
     } 
     return result;
   }
-
+  
+  /**
+   * Simulates the RNG for pearls, blazerods, feathers, and eye breaks. Significantly
+   * speeds up the process of manually checking rates on a seed.
+   * 
+   * @param world - the world 
+   */
+  public static void tellPlayerInitialRates(World world) {
+	  ExampleWorldSavedData dummy = new ExampleWorldSavedData("msl-race-mod_ExampleData");
+	  dummy.init(world);
+	  int total_blazerods = 0;
+	  int total_blazes = 0;
+	  int total_pearls = 0;
+	  int total_endermen = 0;
+	  int total_feathers = 0;
+	  int total_chickens = 0;
+	  int broken_eyes = 0;
+	  int total_eyes = 0;
+	  while (total_blazerods < 6) {
+		  int seedResult = Math.abs((int)dummy.updateRodSeed()) % (int)Math.pow(16.0D, 4.0D);
+	      boolean didPass = (seedResult % 16 < 8);  
+	      if (didPass) {
+	        total_blazerods++;
+	      }
+	      total_blazes++;
+	  }
+      while (total_pearls < 12) {
+    	  int seedResult = Math.abs((int)dummy.updatePearlSeed()) % (int)Math.pow(16.0D, 4.0D);
+    	  boolean didPass = (seedResult % 16 < 10);  
+    	  if (didPass) {
+    		  total_pearls++;
+    	  }
+    	  total_endermen++;
+      }
+      while (total_eyes < 5) {
+    	  int seedResult = Math.abs((int)dummy.updateEyeSeed()) % (int)Math.pow(16.0D, 4.0D);
+    	  boolean didPass = (seedResult % 5 > 0);
+    	  if (!didPass) {
+    		  broken_eyes++;
+    	  }
+    	  total_eyes++;
+      }
+      EntityClientPlayerMP player = Minecraft.getMinecraft().thePlayer;
+	  player.sendChatMessage(String.format("Blaze rates are %d/%d, Endermen "
+	  		+ "rates are %d/%d, eye breaks are %d/%d", 
+	  		total_blazerods, total_blazes, total_pearls, total_endermen, broken_eyes, total_eyes));
+	  world.playSoundEffect(player.posX, player.posY, player.posZ, "ambient.weather.thunder", 10000.0F, 0.8F + 0.2F);
+  }
 }

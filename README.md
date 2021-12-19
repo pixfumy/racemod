@@ -1,2 +1,2 @@
-# racemod 0.4.0
+# racemod 0.4.1
 A Forge mod for 1.7.10 and 1.8.9 that normalizes enderman, blaze, and chicken drops as well as eye breaks to be based only on the seed instead of on the game's Java random generator. This is the official tournament mod for Minecraft Relay Cup 2 as well as Spinnaker's 1.7 weeklies.  For 1.7.2, download the 1.7.10 version and follow [this](https://www.youtube.com/watch?v=jeIc6Vb-u3k) guide.

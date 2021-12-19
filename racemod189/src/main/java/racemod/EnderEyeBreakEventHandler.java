@@ -32,13 +32,13 @@ public class EnderEyeBreakEventHandler {
 					seedInfo = ExampleWorldSavedData.get((World)DimensionManager.getWorld(0));
 					eyeSet.add(eye);
 					Field shatterOrDrop;
-					int seedResult = Math.abs(((int) seedInfo.updateEyeSeed())) % 5;
+					int seedResult = Math.abs((int)seedInfo.updateEyeSeed()) % (int)Math.pow(16.0D, 4.0D);
 					shatterOrDrop = eye.getClass().getDeclaredField("field_70221_f"); //shatterOrDrop, or obfuscated field_70221_f, 
 					shatterOrDrop.setAccessible(true);
-					boolean newShatterOrDrop = seedResult > 0;
+					boolean newShatterOrDrop = seedResult % 5 > 0;
 					shatterOrDrop.setBoolean(eye, newShatterOrDrop);
 					shatterOrDrop.setAccessible(false);
-					System.out.println(" " + seedResult);
+					System.out.println(" " + newShatterOrDrop);
 				}
 				
 			} catch (NoSuchFieldException e1) {

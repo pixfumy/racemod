@@ -5,11 +5,14 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BedrockDropMixin",
+    "EndPortalRoomMixin",
     "EyeOfEnderMixin",
     "LakesMixin",
     "LevelPropertiesMixin",
     "MobDropsMixin",
-    "RavineMixin"
+    "RavineMixin",
+    "SpiralStaircaseMixin",
+    "StartPieceMixin"
   ],
   "client": [
   ],

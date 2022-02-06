@@ -9,6 +9,7 @@
     "EyeOfEnderMixin",
     "LakesMixin",
     "LevelPropertiesMixin",
+    "TitleScreenMixin",
     "MobDropsMixin",
     "RavineMixin",
     "SpiralStaircaseMixin",

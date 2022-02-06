@@ -9,4 +9,4 @@ A 1.7 and 1.8 tournament mod that makes major sources of RNG consistent between 
 - All ravines are removed
 - All water and lava lakes below y60 are removed
 
-You need legacy fabric to use this so yeah
+This mod requires Legacy Fabric 0.12.12+.

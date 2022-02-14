@@ -1,8 +1,8 @@
 package io.github.marinersfan824.racemod;
 
-import net.minecraft.util.math.Vec3i;
+import net.minecraft.util.math.BlockBox;
 
 public interface ISpiralStaircase {
-    void setPortalRoomPos(Vec3i blockPos);
-    Vec3i getPortalRoomPos();
+    void setPortalRoomBox(BlockBox boundingBox);
+    BlockBox getPortalRoomBox();
 }

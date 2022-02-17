@@ -1,5 +1,6 @@
 package io.github.marinersfan824.racemod.mixin;
 
+import io.github.marinersfan824.racemod.ILevelProperties;
 import io.github.marinersfan824.racemod.RNGStreamGenerator;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.MinecraftServer;
@@ -11,10 +12,15 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(LevelProperties.class)
-public abstract class LevelPropertiesMixin {
-    private RNGStreamGenerator instance = RNGStreamGenerator.getInstance(this.toString());
+public abstract class LevelPropertiesMixin implements ILevelProperties {
+    private final RNGStreamGenerator instance = new RNGStreamGenerator();
 
     @Shadow private long seed;
+
+    @Override
+    public RNGStreamGenerator getRngStreamGenerator(){
+        return this.instance;
+    }
 
     @Inject(at = @At("TAIL"), method = "<init>(Lnet/minecraft/nbt/CompoundTag;)V")
     public void initInject(CompoundTag worldNbt, CallbackInfo ci) {

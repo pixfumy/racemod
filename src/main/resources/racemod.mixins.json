@@ -13,7 +13,8 @@
     "MobDropsMixin",
     "RavineMixin",
     "SpiralStaircaseMixin",
-    "StartPieceMixin"
+    "StartPieceMixin",
+    "TitleScreenMixin"
   ],
   "client": [
   ],

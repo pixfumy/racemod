@@ -1,5 +1,6 @@
 package io.github.marinersfan824.racemod.mixin;
 
+import io.github.marinersfan824.racemod.ILevelProperties;
 import io.github.marinersfan824.racemod.RNGStreamGenerator;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.BlazeEntity;
@@ -7,6 +8,8 @@ import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.world.ServerWorld;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -17,11 +20,11 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class MobDropsMixin {
     @Shadow protected int playerHitTimer;
     @Shadow protected abstract void dropLoot(boolean allowDrops, int lootingMultiplier);
-    private RNGStreamGenerator rngStreamGenerator;
 
     @Redirect(method = "onKilled", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/LivingEntity;dropLoot(ZI)V"))
     protected void dropLoot(LivingEntity entity, boolean allowDrops, int lootingMultiplier) {
-        rngStreamGenerator = RNGStreamGenerator.getInstance(entity.world.getLevelProperties().toString());
+        MinecraftServer server = ((ServerWorld)entity.world).getServer();
+        RNGStreamGenerator rngStreamGenerator = ((ILevelProperties) server.getWorld().getLevelProperties()).getRngStreamGenerator();
         if (entity instanceof EndermanEntity) {
             int seedResult = (int) rngStreamGenerator.updateAndGetEnderPearlSeed();
             int numRolls = 1 + lootingMultiplier;
@@ -67,7 +70,7 @@ public abstract class MobDropsMixin {
 
         } else if (entity instanceof BlazeEntity) {
 
-            int seedResult = (int)rngStreamGenerator.updateAndGetBlazeRodSeed();
+            int seedResult = (int) rngStreamGenerator.updateAndGetBlazeRodSeed();
             int numRolls = 1 + lootingMultiplier;
             int numDrops = 0;
             int i;

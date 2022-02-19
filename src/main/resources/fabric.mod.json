@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "racemod",
+  "version": "${version}",
+
+  "name": "Racemod",
+  "description": "pre 1.9 tourney mod",
+  "authors": [
+    "marinersfan824",
+    "pixfumy",
+    "sharpieman20",
+    "gregor0410"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.marinersfan824.racemod.Main"
+    ]
+  },
+  "mixins": [
+    "racemod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "minecraft": "1.7.10"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

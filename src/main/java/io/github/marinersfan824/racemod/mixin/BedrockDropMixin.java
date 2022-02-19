@@ -22,7 +22,7 @@ public abstract class BedrockDropMixin extends Entity {
 
     @Inject(method = "dropStack", at = @At("HEAD"))
     public void dropItemOverride(ItemStack stack, boolean bl, boolean incrementStats, CallbackInfoReturnable<ItemEntity> cir) {
-        if (stack.getItem() == Item.fromBlock(Blocks.BEDROCK)) {
+        if (stack != null && stack.getItem() == Item.fromBlock(Blocks.BEDROCK)) {
             RNGStreamGenerator.tellPlayerRates(this.world);
         }
     }

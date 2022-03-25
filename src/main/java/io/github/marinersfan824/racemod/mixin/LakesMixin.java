@@ -18,8 +18,8 @@ import java.util.Random;
 @Mixin(LakesFeature.class)
 public class LakesMixin {
     @Inject(method = "method_4028", at = @At("HEAD"), cancellable = true)
-    public void method_4028(World random, Random i, int j, int k, int par5, CallbackInfoReturnable<Boolean> cir) {
-        if (j <= 60) {
+    public void method_4028(World world, Random random, int i, int j, int k, CallbackInfoReturnable<Boolean> cir) {
+        if (j <= 55) {
             cir.setReturnValue(false);
         }
     }

@@ -14,7 +14,8 @@
     "RavineMixin",
     "SpiralStaircaseMixin",
     "StartPieceMixin",
-    "TitleScreenMixin"
+    "TitleScreenMixin",
+    "CaveMixin"
   ],
   "client": [
   ],

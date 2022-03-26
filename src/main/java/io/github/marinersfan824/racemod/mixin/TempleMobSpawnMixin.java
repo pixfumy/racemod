@@ -29,9 +29,12 @@ public class TempleMobSpawnMixin {
         Chunk chunk = thisEntity.world.getChunk(x >> 4, z >> 4);
         x &= 15;
         z &= 15;
-        int skyLight = ((ChunkSectionAccessor)chunk).getChunkSections()[y >> 4].getSkyLight(x, y & 15, z);
-        if (standingBlock == Blocks.SANDSTONE && skyLight != 15) {
-            cir.setReturnValue(false);
+        ChunkSection chunkSection = ((ChunkSectionAccessor)chunk).getChunkSections()[y >> 4];
+        if (chunkSection != null && standingBlock == Blocks.SANDSTONE) {
+            int skylight = chunkSection.getSkyLight(x, y & 15, z);
+            if (skylight != 15) {
+                cir.setReturnValue(false);
+            }
         }
     }
 }

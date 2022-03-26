@@ -15,7 +15,9 @@
     "SpiralStaircaseMixin",
     "StartPieceMixin",
     "TitleScreenMixin",
-    "CaveMixin"
+    "CaveMixin",
+    "TempleMobSpawnMixin",
+    "ChunkSectionAccessor"
   ],
   "client": [
   ],

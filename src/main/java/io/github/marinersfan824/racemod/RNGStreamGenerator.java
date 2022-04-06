@@ -283,7 +283,7 @@ public class RNGStreamGenerator {
             total_spiders++;
         }
         ClientPlayerEntity player = MinecraftClient.getInstance().field_3805;
-        player.addMessage(new TranslatableText(String.format("Initial rates on this seed: Blaze rates are %d/%d, Endermen "
+        player.addMessage(new TranslatableText(String.format("Current rates on this seed: Blaze rates are %d/%d, Endermen "
                         + "rates are %d/%d, eye breaks are %d/%d, feather rates are %d/%d, flint rates are %d/%d, string rates are %d/%d",
                 total_blazerods, total_blazes, total_pearls, total_endermen, broken_eyes, total_eyes, total_feathers, total_chickens, total_flint, total_gravel,
                 total_string, total_spiders

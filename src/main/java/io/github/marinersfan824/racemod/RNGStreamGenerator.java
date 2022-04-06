@@ -103,6 +103,7 @@ public class RNGStreamGenerator {
         dummy.initializeFeatherSeed(seed);
         dummy.initializePearlSeed(seed);
         dummy.initializeFlintSeed(seed);
+        dummy.initializeFlintSeed(seed);
 
         int total_blazerods = 0;
         int total_blazes = 0;
@@ -112,7 +113,8 @@ public class RNGStreamGenerator {
         int total_eyes = 0;
         int total_feathers = 0;
         int total_chickens = 0;
-
+        int total_flint = 0;
+        int total_gravel = 0;
         while (total_blazerods < 7) {
             int seedResult = Math.abs((int)dummy.updateAndGetBlazeRodSeed());
             boolean didPass = (seedResult % 16 < 8);
@@ -151,10 +153,18 @@ public class RNGStreamGenerator {
             }
             total_chickens++;
         }
+        while (total_flint < 6) {
+            int seedResult = (int) dummy.updateAndGetFlintSeed();
+            if (seedResult % 10 == 0) {
+                total_flint++;
+            }
+            total_gravel++;
+        }
         ClientPlayerEntity player = MinecraftClient.getInstance().field_3805;
         player.addMessage(new TranslatableText(String.format("Initial rates on this seed: Blaze rates are %d/%d, Endermen "
-                        + "rates are %d/%d, eye breaks are %d/%d, feathers/chickens are %d/%d",
-                total_blazerods, total_blazes, total_pearls, total_endermen, broken_eyes, total_eyes, total_feathers, total_chickens)));
+                        + "rates are %d/%d, eye breaks are %d/%d, feather rates are %d/%d, flint rates are %d/%d,",
+                total_blazerods, total_blazes, total_pearls, total_endermen, broken_eyes, total_eyes, total_feathers, total_chickens, total_flint, total_gravel
+                )));
         world.playSound(player.x, player.y, player.z, "fireworks.launch", 10000.0F, 0.8F + 0.2F);
     }
 
@@ -166,6 +176,7 @@ public class RNGStreamGenerator {
         dummy.enderEyeSeed = main.enderEyeSeed;
         dummy.enderPearlSeed = main.enderPearlSeed;
         dummy.featherSeed = main.featherSeed;
+        dummy.flintSeed = main.flintSeed;
         int total_blazerods = 0;
         int total_blazes = 0;
         int total_pearls = 0;
@@ -174,6 +185,8 @@ public class RNGStreamGenerator {
         int total_eyes = 0;
         int total_feathers = 0;
         int total_chickens = 0;
+        int total_flint = 0;
+        int total_gravel = 0;
         while (total_blazerods < 7) {
             int seedResult = Math.abs((int)dummy.updateAndGetBlazeRodSeed());
             boolean didPass = (seedResult % 16 < 8);
@@ -212,10 +225,18 @@ public class RNGStreamGenerator {
             }
             total_chickens++;
         }
+        while (total_flint < 6) {
+            int seedResult = (int) dummy.updateAndGetFlintSeed();
+            if (seedResult % 10 == 0) {
+                total_flint++;
+            }
+            total_gravel++;
+        }
         ClientPlayerEntity player = MinecraftClient.getInstance().field_3805;
-        player.addMessage(new TranslatableText(String.format("Current rates on this seed: Blaze rates are %d/%d, Endermen "
-                        + "rates are %d/%d, eye breaks are %d/%d, feathers/chickens are %d/%d",
-                total_blazerods, total_blazes, total_pearls, total_endermen, broken_eyes, total_eyes, total_feathers, total_chickens)));
+        player.addMessage(new TranslatableText(String.format("Initial rates on this seed: Blaze rates are %d/%d, Endermen "
+                        + "rates are %d/%d, eye breaks are %d/%d, feather rates are %d/%d, flint rates are %d/%d,",
+                total_blazerods, total_blazes, total_pearls, total_endermen, broken_eyes, total_eyes, total_feathers, total_chickens, total_flint, total_gravel
+                )));
         world.playSound(player.x, player.y, player.z, "ambient.weather.thunder", 10000.0F, 0.8F + 0.2F);
     }
 
@@ -237,6 +258,8 @@ public class RNGStreamGenerator {
         return this.featherSeed;
     }
 
+    public long getFlintSeed() { return this.flintSeed; };
+
     public void setEnderEyeSeed(long seed) {
         this.enderEyeSeed = seed;
     }
@@ -251,5 +274,9 @@ public class RNGStreamGenerator {
 
     public void setFeatherSeed(long seed) {
         this.featherSeed = seed;
+    }
+
+    public void setFlintSeed(long seed) {
+        this.flintSeed = seed;
     }
 }

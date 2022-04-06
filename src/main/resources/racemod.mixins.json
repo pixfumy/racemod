@@ -17,7 +17,8 @@
     "TitleScreenMixin",
     "CaveMixin",
     "TempleMobSpawnMixin",
-    "ChunkSectionAccessor"
+    "ChunkSectionAccessor",
+    "FlintMixin"
   ],
   "client": [
   ],

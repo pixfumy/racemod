@@ -79,7 +79,7 @@ public abstract class LevelPropertiesMixin implements ILevelProperties {
             if (stringSeed == 0) {
                 instance.initializeStringSeed(this.seed);
             } else {
-                instance.setStringSeed(this.seed);
+                instance.setStringSeed(stringSeed);
             }
         } else {
             instance.initializeStringSeed(this.seed);

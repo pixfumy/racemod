@@ -13,7 +13,7 @@ public class RNGStreamGenerator {
     private long blazeRodSeed;
     private long featherSeed;
     private long flintSeed;
-    private long spiderSeed;
+    private long stringSeed;
 
     public void initializeEyeSeed(long worldSeed) {
         long seed = worldSeed ^ 0x99A2B75BBL;
@@ -60,6 +60,15 @@ public class RNGStreamGenerator {
         this.flintSeed = seed;
     }
 
+    public void initializeStringSeed(long worldSeed) {
+        long seed = worldSeed ^ 0x120012034131L;
+        Random stream = new Random(seed);
+        for (int i = 0; i < 8; i++) {
+            seed = stream.nextLong();
+        }
+        this.stringSeed = seed;
+    }
+
     public long updateAndGetEnderEyeSeed() {
         Random stream = new Random(this.enderEyeSeed);
         long ret = Math.abs((int)this.enderEyeSeed) % (int)Math.pow(16.0D, 4.0D);
@@ -95,6 +104,13 @@ public class RNGStreamGenerator {
         return ret;
     }
 
+    public long updateAndGetStringSeed() {
+        Random stream = new Random(this.stringSeed);
+        long ret = Math.abs((int)this.stringSeed) % (int)Math.pow(16.0D, 4.0D);
+        this.stringSeed = stream.nextLong();
+        return ret;
+    }
+
     public static void tellPlayerInitialRates(World world) {
         long seed = world.getSeed();
         RNGStreamGenerator dummy = new RNGStreamGenerator();
@@ -104,7 +120,6 @@ public class RNGStreamGenerator {
         dummy.initializePearlSeed(seed);
         dummy.initializeFlintSeed(seed);
         dummy.initializeFlintSeed(seed);
-
         int total_blazerods = 0;
         int total_blazes = 0;
         int total_pearls = 0;
@@ -234,13 +249,11 @@ public class RNGStreamGenerator {
         }
         ClientPlayerEntity player = MinecraftClient.getInstance().field_3805;
         player.addMessage(new TranslatableText(String.format("Initial rates on this seed: Blaze rates are %d/%d, Endermen "
-                        + "rates are %d/%d, eye breaks are %d/%d, feather rates are %d/%d, flint rates are %d/%d,",
+                        + "rates are %d/%d, eye breaks are %d/%d, feather rates are %d/%d, flint rates are %d/%d",
                 total_blazerods, total_blazes, total_pearls, total_endermen, broken_eyes, total_eyes, total_feathers, total_chickens, total_flint, total_gravel
                 )));
         world.playSound(player.x, player.y, player.z, "ambient.weather.thunder", 10000.0F, 0.8F + 0.2F);
     }
-
-
 
     public long getEnderEyeSeed() {
         return this.enderEyeSeed;
@@ -260,6 +273,10 @@ public class RNGStreamGenerator {
 
     public long getFlintSeed() { return this.flintSeed; };
 
+    public long getStringSeed() {
+        return this.stringSeed;
+    }
+
     public void setEnderEyeSeed(long seed) {
         this.enderEyeSeed = seed;
     }
@@ -278,5 +295,9 @@ public class RNGStreamGenerator {
 
     public void setFlintSeed(long seed) {
         this.flintSeed = seed;
+    }
+
+    public void setStringSeed(long seed) {
+        this.stringSeed = seed;
     }
 }

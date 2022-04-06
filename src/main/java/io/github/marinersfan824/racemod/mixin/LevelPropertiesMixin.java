@@ -74,6 +74,16 @@ public abstract class LevelPropertiesMixin implements ILevelProperties {
         } else {
             instance.initializeFlintSeed(this.seed);
         }
+        if (worldNbt.contains("stringSeed")) {
+            long stringSeed = worldNbt.getLong("stringSeed");
+            if (stringSeed == 0) {
+                instance.initializeStringSeed(this.seed);
+            } else {
+                instance.setStringSeed(this.seed);
+            }
+        } else {
+            instance.initializeStringSeed(this.seed);
+        }
     }
 
     @Inject(at = @At("HEAD"), method = "putNbt")
@@ -83,5 +93,6 @@ public abstract class LevelPropertiesMixin implements ILevelProperties {
         worldNBT.putLong("blazeRodSeed", instance.getBlazeRodSeed());
         worldNBT.putLong("featherSeed", instance.getFeatherSeed());
         worldNBT.putLong("flintSeed", instance.getFlintSeed());
+        worldNBT.putLong("stringSeed", instance.getStringSeed());
     }
 }

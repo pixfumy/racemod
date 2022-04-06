@@ -19,6 +19,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(LivingEntity.class)
 public abstract class MobDropsMixin {
+    // TODO: this code should be split into mixins into the blaze, endermen, chicken, and spider classes.
     @Shadow protected int playerHitTimer;
     @Shadow protected abstract void dropLoot(boolean allowDrops, int lootingMultiplier);
 

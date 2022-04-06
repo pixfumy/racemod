@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 public class RNGStreamGenerator {
+    // TODO: refactor this class, lots of repeated code currently
     private long enderEyeSeed;
     private long enderPearlSeed;
     private long blazeRodSeed;

@@ -32,8 +32,7 @@ public abstract class EyeOfEnderMixin extends Entity {
 
     @Inject(method = "method_3228", at = @At("TAIL"))
     public void overrideEyeThrow(double i, int e, double par3, CallbackInfo ci) {
-        int seedResult = Math.abs((int)rngStreamGenerator.updateAndGetEnderEyeSeed());
+        int seedResult = (int)rngStreamGenerator.updateAndGetEnderEyeSeed();
         dropsItem = seedResult % 5 > 0;
-        System.out.println(dropsItem);
     }
 }

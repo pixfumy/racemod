@@ -133,7 +133,7 @@ public class RNGStreamGenerator {
         int total_string = 0;
         int total_spiders = 0;
         while (total_blazerods < 7) {
-            int seedResult = Math.abs((int)dummy.updateAndGetBlazeRodSeed());
+            int seedResult = (int)dummy.updateAndGetBlazeRodSeed();
             boolean didPass = (seedResult % 16 < 8);
             if (didPass) {
                 total_blazerods++;
@@ -141,7 +141,7 @@ public class RNGStreamGenerator {
             total_blazes++;
         }
         while (total_pearls < 14) {
-            int seedResult = Math.abs((int)dummy.updateAndGetEnderPearlSeed());
+            int seedResult = (int)dummy.updateAndGetEnderPearlSeed();
             boolean didPass = (seedResult % 16 < 10);
             if (didPass) {
                 total_pearls++;
@@ -149,7 +149,7 @@ public class RNGStreamGenerator {
             total_endermen++;
         }
         while (total_eyes < 5) {
-            int seedResult = Math.abs((int)dummy.updateAndGetEnderEyeSeed());
+            int seedResult = (int)dummy.updateAndGetEnderEyeSeed();
             boolean didPass = (seedResult % 5 > 0);
             if (!didPass) {
                 broken_eyes++;
@@ -223,7 +223,7 @@ public class RNGStreamGenerator {
         int total_string = 0;
         int total_spiders = 0;
         while (total_blazerods < 7) {
-            int seedResult = Math.abs((int)dummy.updateAndGetBlazeRodSeed());
+            int seedResult = (int)dummy.updateAndGetBlazeRodSeed();
             boolean didPass = (seedResult % 16 < 8);
             if (didPass) {
                 total_blazerods++;
@@ -231,7 +231,7 @@ public class RNGStreamGenerator {
             total_blazes++;
         }
         while (total_pearls < 14) {
-            int seedResult = Math.abs((int)dummy.updateAndGetEnderPearlSeed());
+            int seedResult = (int)dummy.updateAndGetEnderPearlSeed();
             boolean didPass = (seedResult % 16 < 10);
             if (didPass) {
                 total_pearls++;
@@ -239,7 +239,7 @@ public class RNGStreamGenerator {
             total_endermen++;
         }
         while (total_eyes < 5) {
-            int seedResult = Math.abs((int)dummy.updateAndGetEnderEyeSeed());
+            int seedResult = (int)dummy.updateAndGetEnderEyeSeed();
             boolean didPass = (seedResult % 5 > 0);
             if (!didPass) {
                 broken_eyes++;

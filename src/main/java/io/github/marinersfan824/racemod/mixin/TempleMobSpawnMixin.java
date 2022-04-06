@@ -26,15 +26,9 @@ public class TempleMobSpawnMixin {
         int y = (int) thisEntity.y;
         int z = (int) thisEntity.z;
         Block standingBlock = thisEntity.world.method_3774(x, y-1, z);
-        Chunk chunk = thisEntity.world.getChunk(x >> 4, z >> 4);
-        x &= 15;
-        z &= 15;
-        ChunkSection chunkSection = ((ChunkSectionAccessor)chunk).getChunkSections()[y >> 4];
-        if (chunkSection != null && standingBlock == Blocks.SANDSTONE) {
-            int skylight = chunkSection.getSkyLight(x, y & 15, z);
-            if (skylight != 15) {
-                cir.setReturnValue(false);
-            }
+        long timeOfDay = thisEntity.world.getTimeOfDay() % 24000;
+        if ((standingBlock == Blocks.SANDSTONE || standingBlock == Blocks.WOOL) && timeOfDay < 13000) {
+            cir.setReturnValue(false);
         }
     }
 }

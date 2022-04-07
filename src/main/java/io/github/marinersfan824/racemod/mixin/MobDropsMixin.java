@@ -27,7 +27,6 @@ public abstract class MobDropsMixin {
     protected void dropLoot(LivingEntity entity, boolean allowDrops, int lootingMultiplier) {
         MinecraftServer server = ((ServerWorld)entity.world).getServer();
         RNGStreamGenerator rngStreamGenerator = ((ILevelProperties) server.getWorld().getLevelProperties()).getRngStreamGenerator();
-        System.out.println(rngStreamGenerator);
         if (entity instanceof EndermanEntity) {
             int seedResult = (int) rngStreamGenerator.updateAndGetEnderPearlSeed();
             int numRolls = 1 + lootingMultiplier;

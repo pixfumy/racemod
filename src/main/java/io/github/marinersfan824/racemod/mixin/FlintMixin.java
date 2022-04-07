@@ -26,7 +26,6 @@ public class FlintMixin {
          and injecting into the method that has the World passed in as a parameter led to some other ugliness.
          Instead, let's call MinecraftServer.getServer().getWorld(). */
         rngStreamGenerator = ((ILevelProperties)(MinecraftServer.getServer().getWorld().getLevelProperties())).getRngStreamGenerator();
-        System.out.println(rngStreamGenerator);
         int seedResult = (int) rngStreamGenerator.updateAndGetFlintSeed();
         cir.setReturnValue(seedResult % (10 - j * 3) == 0 ? Items.FLINT : Item.fromBlock(Blocks.GRAVEL));
     }

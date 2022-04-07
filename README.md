@@ -6,6 +6,7 @@ A 1.7 and 1.8 tournament mod that makes major sources of RNG consistent between 
 - Flint RNG is standardised
 - Eyes of ender always point towards the portal room regardless of relogs
 - All ravines are removed
+- Mobs will not spawn in temples during the daytime
 - All water and lava pools below y60 are removed (this is different from lava *lakes*, which still occur at y10.
 - The rates on a seed can be checked automatically by throwing an end portal frame block with Q
 - A tournament world file generated in 1.7 will work as intended in 1.8 and vice-versa.

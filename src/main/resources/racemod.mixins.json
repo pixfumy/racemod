@@ -18,7 +18,10 @@
     "CaveMixin",
     "TempleMobSpawnMixin",
     "ChunkSectionAccessor",
-    "FlintMixin"
+    "FlintMixin",
+    "BiomeMixin",
+    "NetherFortressStructureMixin",
+    "SurfaceChunkGeneratorMixin"
   ],
   "client": [
   ],

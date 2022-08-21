@@ -1,4 +1,4 @@
-package io.github.marinersfan824.racemod.mixin;
+package io.github.marinersfan824.racemod.mixin.access;
 
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkSection;

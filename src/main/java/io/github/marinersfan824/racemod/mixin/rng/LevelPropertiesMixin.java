@@ -1,9 +1,8 @@
-package io.github.marinersfan824.racemod.mixin;
+package io.github.marinersfan824.racemod.mixin.rng;
 
-import io.github.marinersfan824.racemod.ILevelProperties;
+import io.github.marinersfan824.racemod.mixinterface.ILevelProperties;
 import io.github.marinersfan824.racemod.RNGStreamGenerator;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.LevelProperties;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

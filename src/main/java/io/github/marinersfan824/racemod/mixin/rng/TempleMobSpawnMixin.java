@@ -1,4 +1,4 @@
-package io.github.marinersfan824.racemod.mixin;
+package io.github.marinersfan824.racemod.mixin.rng;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;

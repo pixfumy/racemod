@@ -1,4 +1,4 @@
-package io.github.marinersfan824.racemod.mixin;
+package io.github.marinersfan824.racemod.mixin.misc;
 
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;

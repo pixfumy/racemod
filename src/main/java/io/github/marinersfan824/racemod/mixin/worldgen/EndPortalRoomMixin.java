@@ -1,6 +1,6 @@
-package io.github.marinersfan824.racemod.mixin;
+package io.github.marinersfan824.racemod.mixin.worldgen;
 
-import io.github.marinersfan824.racemod.ISpiralStaircase;
+import io.github.marinersfan824.racemod.mixinterface.ISpiralStaircase;
 import net.minecraft.class_21;
 import net.minecraft.structure.StructurePiece;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,6 +1,6 @@
-package io.github.marinersfan824.racemod.mixin;
+package io.github.marinersfan824.racemod.mixin.rng;
 
-import io.github.marinersfan824.racemod.ILevelProperties;
+import io.github.marinersfan824.racemod.mixinterface.ILevelProperties;
 import io.github.marinersfan824.racemod.RNGStreamGenerator;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.GravelBlock;

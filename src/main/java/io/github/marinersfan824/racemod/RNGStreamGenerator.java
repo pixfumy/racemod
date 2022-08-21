@@ -1,5 +1,6 @@
 package io.github.marinersfan824.racemod;
 
+import io.github.marinersfan824.racemod.mixinterface.ILevelProperties;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.text.TranslatableText;

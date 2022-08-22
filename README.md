@@ -12,4 +12,4 @@ A 1.7 and 1.8 tournament mod that makes major sources of RNG consistent between 
 - Desert Hills are replaced by normal desert to make terrain flatter
 - The rates on a seed can be checked automatically by throwing an end portal frame block with Q
 
-This mod requires Legacy Fabric 0.13.2+.
+This mod requires Legacy Fabric 0.12.12+.

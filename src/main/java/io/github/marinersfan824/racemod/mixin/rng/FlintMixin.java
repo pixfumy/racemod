@@ -2,11 +2,16 @@ package io.github.marinersfan824.racemod.mixin.rng;
 
 import io.github.marinersfan824.racemod.mixinterface.ILevelProperties;
 import io.github.marinersfan824.racemod.RNGStreamGenerator;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.GravelBlock;
+import net.minecraft.block.Material;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,18 +20,26 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Random;
 
 @Mixin(GravelBlock.class)
-public class FlintMixin {
+public class FlintMixin extends Block {
     private RNGStreamGenerator rngStreamGenerator;
-    @Inject(method = "method_398", at = @At("RETURN"), cancellable = true)
-    private void getDrops(int i, Random random, int j, CallbackInfoReturnable<Item> cir) {
-        if (j > 3) {
-            j = 3;
+
+    protected FlintMixin(Material material) {
+        super(material);
+    }
+
+    @Override
+    public void method_410(World world, int i, int j, int k, int l, float f, int m) {
+        int var8 = this.getBonusDrops(m, world.random);
+        for(int var9 = 0; var9 < var8; ++var9) {
+            if (!(world.random.nextFloat() > f)) {
+                World overWorld = ((ServerWorld)world).getServer().getWorld();
+                rngStreamGenerator = ((ILevelProperties)overWorld.getLevelProperties()).getRngStreamGenerator();
+                long seedResult = rngStreamGenerator.getAndUpdateSeed("flintSeed");
+                Item var10 = seedResult % 10 == 0 ? Items.FLINT : Item.fromBlock(this);
+                if (var10 != null) {
+                    this.method_422(world, i, j, k, new ItemStack(var10, 1, this.method_431(l)));
+                }
+            }
         }
-        /* I don't like having to do this, but Block does not store a reference to the world it belongs to,
-         and injecting into the method that has the World passed in as a parameter led to some other ugliness.
-         Instead, let's call MinecraftServer.getServer().getWorld(). */
-        rngStreamGenerator = ((ILevelProperties)(MinecraftServer.getServer().getWorld().getLevelProperties())).getRngStreamGenerator();
-        int seedResult = (int) rngStreamGenerator.updateAndGetFlintSeed();
-        cir.setReturnValue(seedResult % (10 - j * 3) == 0 ? Items.FLINT : Item.fromBlock(Blocks.GRAVEL));
     }
 }

@@ -12,7 +12,7 @@ import java.util.Random;
 import java.util.Set;
 
 public class RNGStreamGenerator {
-    private HashMap<String, Long> rngSeeds = new HashMap();
+    protected HashMap<String, Long> rngSeeds = new HashMap();
 
     public void init(long worldSeed) {
         /*  abstracts some of the standardization into this HashMap. To add a new standardized source of RNG, put your entries
@@ -60,20 +60,31 @@ public class RNGStreamGenerator {
         return rngSeeds.entrySet();
     }
 
+    public Set<String> keySet() {
+        return rngSeeds.keySet();
+    }
+
     /*
     Unfortunately this code is still ugly because each RNG source does its own independent calculations
     with the seed.
      */
     public static void tellPlayerCurrentRates(World world) {
         long seed = world.getSeed();
-        RNGStreamGenerator dummy = new RNGStreamGenerator();
         RNGStreamGenerator main = ((ILevelProperties)world.getLevelProperties()).getRngStreamGenerator();
-        dummy.blazeRodSeed = main.blazeRodSeed;
-        dummy.enderEyeSeed = main.enderEyeSeed;
-        dummy.enderPearlSeed = main.enderPearlSeed;
-        dummy.featherSeed = main.featherSeed;
-        dummy.flintSeed = main.flintSeed;
-        dummy.stringSeed = main.stringSeed;
+        RNGStreamGenerator dummy = new RNGStreamGenerator();
+        dummy.rngSeeds = new HashMap() {
+            {
+                put("blazeRodSeed", main.getSeed("blazeRodSeed"));
+                put("enderPearlSeed", main.getSeed("enderPearlSeed"));
+                put("featherSeed", main.getSeed("featherSeed"));
+                put("enderEyeSeed", main.getSeed("enderEyeSeed"));
+                put("flintSeed", main.getSeed("flintSeed"));
+                put("stringSeed", main.getSeed("stringSeed"));
+                put("woolSeed", main.getSeed("woolSeed"));
+                put("porkChopSeed", main.getSeed("porkChopSeed"));
+                put("beefSeed", main.getSeed("beefSeed"));
+            }
+        };
         int total_blazerods = 0;
         int total_blazes = 0;
         int total_pearls = 0;
@@ -87,7 +98,7 @@ public class RNGStreamGenerator {
         int total_string = 0;
         int total_spiders = 0;
         while (total_blazerods < 7) {
-            int seedResult = (int)dummy.updateAndGetBlazeRodSeed();
+            int seedResult = (int) dummy.getAndUpdateSeed("blazeRodSeed");
             boolean didPass = (seedResult % 16 < 8);
             if (didPass) {
                 total_blazerods++;
@@ -95,7 +106,7 @@ public class RNGStreamGenerator {
             total_blazes++;
         }
         while (total_pearls < 14) {
-            int seedResult = (int)dummy.updateAndGetEnderPearlSeed();
+            int seedResult = (int) dummy.getAndUpdateSeed("enderPearlSeed");
             boolean didPass = (seedResult % 16 < 10);
             if (didPass) {
                 total_pearls++;
@@ -103,7 +114,7 @@ public class RNGStreamGenerator {
             total_endermen++;
         }
         while (total_eyes < 5) {
-            int seedResult = (int)dummy.updateAndGetEnderEyeSeed();
+            int seedResult = (int)dummy.getAndUpdateSeed("enderEyeSeed");
             boolean didPass = (seedResult % 5 > 0);
             if (!didPass) {
                 broken_eyes++;
@@ -111,7 +122,7 @@ public class RNGStreamGenerator {
             total_eyes++;
         }
         while (total_feathers < 6) {
-            int seedResult = (int) dummy.updateAndGetFeatherSeed();
+            int seedResult = (int) dummy.getAndUpdateSeed("featherSeed");
             for (int i = 0; i < 2; i++) {
                 if (total_feathers == 6) {
                     break;
@@ -125,14 +136,14 @@ public class RNGStreamGenerator {
             total_chickens++;
         }
         while (total_flint < 6) {
-            int seedResult = (int) dummy.updateAndGetFlintSeed();
+            int seedResult = (int) dummy.getAndUpdateSeed("flintSeed");
             if (seedResult % 10 == 0) {
                 total_flint++;
             }
             total_gravel++;
         }
         while (total_string < 3) {
-            int seedResult = (int) dummy.updateAndGetStringSeed();
+            int seedResult = (int) dummy.getAndUpdateSeed("stringSeed");
             for (int i = 0; i < 2; i++) {
                 if (total_string == 3) {
                     break;
@@ -151,6 +162,6 @@ public class RNGStreamGenerator {
                 total_blazerods, total_blazes, total_pearls, total_endermen, broken_eyes, total_eyes, total_feathers, total_chickens, total_flint, total_gravel,
                 total_string, total_spiders
         )));
-        world.playSound(player.x, player.y, player.z, "ambient.weather.thunder", 10000.0F, 0.8F + 0.2F);
+        world.playSound(player.x, player.y, player.z, "ambient.weather.thunder", 1000.0F, 0.8F + 0.2F);
     }
 }

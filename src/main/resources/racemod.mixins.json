@@ -4,6 +4,7 @@
   "package": "io.github.marinersfan824.racemod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "CommandManagerMixin",
     "rng.TempleMobSpawnMixin",
     "rng.FlintMixin",
     "rng.EyeOfEnderMixin",

@@ -1,7 +1,7 @@
 # racemod
 A 1.7 and 1.8 tournament mod that makes major sources of RNG consistent between different players playing on the same seed. This is the official mod for Spinnaker's Pre1.9 Tournament and Minecraft Relay Cup 2.
 
-- Endermen, blaze, spider, and chicken drop rates are all standardised
+- Endermen, blaze, spider, sheep, cow, pig, and chicken rates are all standardized.
 - Eye breaks are standardised
 - Flint RNG is standardised
 - Eyes of ender always point towards the portal room regardless of relogs
@@ -13,3 +13,5 @@ A 1.7 and 1.8 tournament mod that makes major sources of RNG consistent between 
 - The rates on a seed can be checked automatically by throwing an end portal frame block with Q
 
 This mod requires Legacy Fabric 0.12.12+.
+
+Racemod is for tournament competitors. If you're a seedfinder, put both racemod and [Seedfinder's Mod](https://github.com/pixfumy/seedfinders-mod) into your mods folder. The latter of which lets you check and manipulate standardized RNG using commands. 

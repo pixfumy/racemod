@@ -66,7 +66,9 @@ public class RNGStreamGenerator {
 
     /*
     Unfortunately this code is still ugly because each RNG source does its own independent calculations
-    with the seed.
+    with the seed. A solution to this would be to make an RNGStream class which wraps a random object or seed
+    and has a getAndUpdate() method within it that returns an int and encapsulates the logic for how drops should be
+    distributed.
      */
     public static void tellPlayerCurrentRates(World world) {
         long seed = world.getSeed();

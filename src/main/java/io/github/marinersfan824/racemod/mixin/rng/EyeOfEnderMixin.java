@@ -1,6 +1,6 @@
-package io.github.marinersfan824.racemod.mixin;
+package io.github.marinersfan824.racemod.mixin.rng;
 
-import io.github.marinersfan824.racemod.ILevelProperties;
+import io.github.marinersfan824.racemod.mixinterface.ILevelProperties;
 import io.github.marinersfan824.racemod.RNGStreamGenerator;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.thrown.EyeOfEnderEntity;
@@ -21,19 +21,11 @@ public abstract class EyeOfEnderMixin extends Entity {
         super(world);
     }
 
-    @Inject(method="<init>*",at=@At("TAIL"))
-    public void onInit(CallbackInfo ci){
-        if(!this.world.isClient){
-            MinecraftServer server = ((ServerWorld)world).getServer();
-            this.rngStreamGenerator = ((ILevelProperties)server.getWorld().getLevelProperties()).getRngStreamGenerator();
-        }
-    }
-
-
     @Inject(method = "method_3228", at = @At("TAIL"))
     public void overrideEyeThrow(double i, int e, double par3, CallbackInfo ci) {
-        int seedResult = Math.abs((int)rngStreamGenerator.updateAndGetEnderEyeSeed());
-        dropsItem = seedResult % 5 > 0;
-        System.out.println(dropsItem);
+        World overWorld = ((ServerWorld)this.world).getServer().getWorld();
+        this.rngStreamGenerator = ((ILevelProperties)overWorld.getLevelProperties()).getRngStreamGenerator();
+        long seedResult = rngStreamGenerator.getAndUpdateSeed("enderEyeSeed");
+        this.dropsItem = seedResult % 5 > 0;
     }
 }

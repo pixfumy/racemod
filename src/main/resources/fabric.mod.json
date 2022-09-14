@@ -9,7 +9,8 @@
     "marinersfan824",
     "pixfumy",
     "sharpieman20",
-    "gregor0410"
+    "gregor0410",
+    "kingcontaria"
   ],
   "contact": {
     "homepage": "",
@@ -17,7 +18,6 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
 
   "environment": "*",
   "entrypoints": {

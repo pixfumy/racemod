@@ -23,7 +23,7 @@ public abstract class TitleScreenMixin {
                 "One quadrant that I can dig in!",
                 "Fruit portal!",
                 "Is Msushi on peaceful?",
-                "Leave your horse here, the stronghold's on that coast!",
+                "Leave your horse here Anthony, the stronghold's on that coast!",
                 "Anthony those are pearls not food!",
                 "Show us your pokemon cards if you have downtime!",
                 "I believe in The Nation and The Nation believes in me.",
@@ -65,7 +65,9 @@ public abstract class TitleScreenMixin {
                 "After this match, let's do Snow Seed.",
                 "Hi Cubex!",
                 "And guess what? A 3 eye.",
-                "illU"
+                "illU",
+                "xvsxvSNGgd",
+                "28,270,471 69 -25,368,883"
         };
         this.splashText = splashes[(new Random()).nextInt(splashes.length)];
     }

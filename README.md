@@ -1,5 +1,5 @@
 # racemod
-A 1.7 and 1.8 tournament mod that makes major sources of RNG consistent between different players playing on the same seed. This is the official mod for Spinnaker's Pre1.9 Tournament and Minecraft Relay Cup 2.
+A 1.7 tournament mod that makes major sources of RNG consistent between different players playing on the same seed. This is the official mod for Spinnaker's Pre1.9 Tournament.
 
 - Endermen, blaze, spider, sheep, cow, pig, and chicken rates are all standardized.
 - Eye breaks are standardised
@@ -10,7 +10,6 @@ A 1.7 and 1.8 tournament mod that makes major sources of RNG consistent between 
 - All water and lava pools below y60 are removed (this is different from lava *lakes*, which still occur at y10).
 - Fortresses and surface lava pools are more common
 - Desert Hills are replaced by normal desert to make terrain flatter
-- The rates on a seed can be checked automatically by throwing an end portal frame block with Q
 
 This mod requires Legacy Fabric 0.12.12+.
 

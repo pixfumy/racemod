@@ -11,8 +11,7 @@ import java.util.Random;
 public class SurfaceChunkGeneratorMixin {
 
     @Redirect(method = "decorateChunk", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I", ordinal = 4))
-    private int moreLavapools(Random instance, int bound) {
-        return instance.nextInt(bound * 2) / 5;
+    private int moreLavapools(Random random, int bound) {
+        return random.nextInt(bound * 2) / 3;
     }
-
 }

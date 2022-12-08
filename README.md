@@ -8,8 +8,10 @@ A 1.7 tournament mod that makes major sources of RNG consistent between differen
 - All ravines are removed
 - Mobs will not spawn in temples during the daytime
 - All water and lava pools below y60 are removed (this is different from lava *lakes*, which still occur at y10).
-- Fortresses and surface lava pools are more common
+- Surface lava pools are more common
 - Desert Hills are replaced by normal desert to make terrain flatter
+- Ghast spawns are disabled
+
 
 This mod requires Legacy Fabric 0.12.12+.
 

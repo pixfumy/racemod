@@ -1,5 +1,5 @@
 # racemod
-A 1.7 tournament mod that makes major sources of RNG consistent between different players playing on the same seed. This is the official mod for Spinnaker's Pre1.9 Tournament.
+A 1.7 tournament mod that makes major sources of RNG consistent between different players playing on the same seed.
 
 - Endermen, blaze, spider, sheep, cow, pig, and chicken rates are all standardized.
 - Eye breaks are standardised

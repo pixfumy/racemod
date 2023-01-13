@@ -16,6 +16,7 @@
     "rng.PigEntityMixin",
     "rng.SheepEntityMixin",
     "rng.TempleMobSpawnMixin",
+    "worldgen.BiomeDecoratorMixin",
     "worldgen.BiomeMixin",
     "worldgen.CaveMixin",
     "worldgen.EndPortalRoomMixin",

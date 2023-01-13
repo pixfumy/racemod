@@ -7,7 +7,7 @@ A 1.7 tournament mod that makes major sources of RNG consistent between differen
 - Eyes of ender always point towards the portal room regardless of relogs
 - All ravines are removed
 - Mobs will not spawn in temples during the daytime
-- All water and lava pools below y60 are removed (this is different from lava *lakes*, which still occur at y10).
+- All water, lava pools, and flowing lava sources below y60 are removed (this is different from lava *lakes*, which still occur at y10).
 - Surface lava pools are more common
 - Desert Hills are replaced by normal desert to make terrain flatter
 - Ghast spawns are disabled

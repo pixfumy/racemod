@@ -6,6 +6,7 @@
   "mixins": [
     "TitleScreenMixin",
     "rng.BlazeEntityMixin",
+    "rng.BlazeSpawnerMixin",
     "rng.ChickenEntityMixin",
     "rng.CowEntityMixin",
     "rng.EndermanEntityMixin",

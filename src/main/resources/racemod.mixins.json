@@ -15,6 +15,7 @@
     "rng.NetherBiomeMixin",
     "rng.PigEntityMixin",
     "rng.SheepEntityMixin",
+    "rng.SkeletonEntityMixin",
     "rng.TempleMobSpawnMixin",
     "worldgen.BiomeDecoratorMixin",
     "worldgen.BiomeMixin",

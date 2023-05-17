@@ -30,6 +30,7 @@ public class RNGStreamGenerator {
                 put("woolSeed", worldSeed ^ 0x7F12468038952L);
                 put("porkChopSeed", worldSeed ^ 64182641824614L);
                 put("beefSeed", worldSeed ^ 0xFF97FD1823L);
+                put("arrowSeed", worldSeed ^ 0x9A2B3C4D5E6F7A8BL);
             }
         };
     }

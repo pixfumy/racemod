@@ -20,7 +20,7 @@ public abstract class BlazeSpawnerMixin {
 
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I"))
     private int spawnInStandardizedPos(Random instance, int bound) {
-        if (this.entityId != "Blaze" || this.getWorld().isClient) {
+        if (!this.entityId.equals("Blaze") || this.getWorld().isClient) {
             return instance.nextInt(bound);
         }
         World overWorld = ((ServerWorld)this.getWorld()).getServer().getWorld();
@@ -30,7 +30,7 @@ public abstract class BlazeSpawnerMixin {
 
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextDouble()D"))
     private double spawnInStandardizedPos2(Random instance) {
-        if (this.entityId != "Blaze" || this.getWorld().isClient) {
+        if (!this.entityId.equals("Blaze") || this.getWorld().isClient) {
             return instance.nextDouble();
         }
         World overWorld = ((ServerWorld)this.getWorld()).getServer().getWorld();
@@ -40,7 +40,7 @@ public abstract class BlazeSpawnerMixin {
 
     @Redirect(method = "tick", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextFloat()F"))
     private float spawnInStandardizedPos3(Random instance) {
-        if (this.entityId != "Blaze" || this.getWorld().isClient) {
+        if (!this.entityId.equals("Blaze") || this.getWorld().isClient) {
             return instance.nextFloat();
         }
         World overWorld = ((ServerWorld)this.getWorld()).getServer().getWorld();
@@ -50,7 +50,7 @@ public abstract class BlazeSpawnerMixin {
 
     @Redirect(method = "updateSpawns", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I"))
     private int setSpawnDelay(Random instance, int bound) {
-        if (this.entityId != "Blaze" || this.getWorld().isClient) {
+        if (!this.entityId.equals("Blaze") || this.getWorld().isClient) {
             return instance.nextInt(bound);
         }
         World overWorld = ((ServerWorld)this.getWorld()).getServer().getWorld();

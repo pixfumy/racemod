@@ -1,9 +1,10 @@
 # racemod
-A 1.7 tournament mod that makes major sources of RNG consistent between different players playing on the same seed.
+A mod for 1.7 ranked that makes major sources of RNG consistent between different players playing on the same seed.
 
 - Endermen, blaze, spider, sheep, cow, pig, and chicken rates are all standardized.
-- Eye breaks are standardised
-- Flint RNG is standardised
+- Blaze spawns are standardized
+- Eye breaks are standardized
+- Flint RNG is standardized
 - Eyes of ender always point towards the portal room regardless of relogs
 - All ravines are removed
 - Mobs will not spawn in temples during the daytime
@@ -11,7 +12,6 @@ A 1.7 tournament mod that makes major sources of RNG consistent between differen
 - Surface lava pools are more common
 - Desert Hills are replaced by normal desert to make terrain flatter
 - Ghast spawns are disabled
-
 
 This mod requires Legacy Fabric 0.12.12+.
 

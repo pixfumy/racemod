@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.Random;
 
 @Mixin(BiomeDecorator.class)
-public class BiomeDecoratorMixin {
+public class RemoveFlowingLavaBelowY60Mixin {
     @Redirect(method = "generate", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/gen/feature/StoneFeature;method_4028(Lnet/minecraft/world/World;Ljava/util/Random;III)Z"))
     private boolean stopLava(StoneFeature instance, World world, Random random, int i, int j, int k) {
         if (j < 60) {

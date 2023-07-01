@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.Random;
 
 @Mixin(SurfaceChunkGenerator.class)
-public class SurfaceChunkGeneratorMixin {
+public class IncreaseLavaPoolsMixin {
 
     @Redirect(method = "decorateChunk", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I", ordinal = 4))
     private int moreLavapools(Random random, int bound) {

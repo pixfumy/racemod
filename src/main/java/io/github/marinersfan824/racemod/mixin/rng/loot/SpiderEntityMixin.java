@@ -1,47 +1,46 @@
-package io.github.marinersfan824.racemod.mixin.rng;
+package io.github.marinersfan824.racemod.mixin.rng.loot;
 
 import io.github.marinersfan824.racemod.RNGStreamGenerator;
 import io.github.marinersfan824.racemod.mixinterface.ILevelProperties;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.passive.CowEntity;
-import net.minecraft.entity.passive.PigEntity;
+import net.minecraft.entity.mob.SpiderEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Mixin(CowEntity.class)
-public abstract class CowEntityMixin extends LivingEntity {
-
+@Mixin(SpiderEntity.class)
+public abstract class SpiderEntityMixin extends LivingEntity {
     private RNGStreamGenerator rngStreamGenerator;
-
-    public CowEntityMixin(World world) {
+    public SpiderEntityMixin(World world) {
         super(world);
     }
-
     @Inject(method = "dropLoot", at = @At("HEAD"), cancellable = true)
     private void dropStandardizedLoot(boolean allowDrops, int lootingMultiplier, CallbackInfo ci) {
-
-        int var3 = this.random.nextInt(3) + this.random.nextInt(1 + lootingMultiplier);
-        int var4;
-        for(var4 = 0; var4 < var3; ++var4) {
-            this.dropItem(Items.LEATHER, 1);
-        }
         World overWorld = ((ServerWorld)this.world).getServer().getWorld();
         rngStreamGenerator = ((ILevelProperties)overWorld.getLevelProperties()).getRngStreamGenerator();
-        long seedResult = rngStreamGenerator.getAndUpdateSeed("beefSeed");
-        int numDrops = 1 + (int) (seedResult % (3 + lootingMultiplier));
-        for(var4 = 0; var4 < numDrops; ++var4) {
-            if (this.isOnFire()) {
-                this.dropItem(Items.COOKED_BEEF, 1);
-            } else {
-                this.dropItem(Items.BEEF, 1);
+        long seedResult = rngStreamGenerator.getAndUpdateSeed("stringSeed");
+        int numRolls = 2 + lootingMultiplier;
+        int numDrops = 0;
+        int j;
+        for (j = 0; j < numRolls; j++) {
+            boolean passed = (seedResult % 16 < 8);
+
+            if (passed) {
+                numDrops++;
             }
+            seedResult /= 16;
+        }
+        for (j = 0; j < numDrops; j++) {
+            ItemStack item = new ItemStack(Items.STRING, 1, 0);
+            this.dropItem(item, 1);
+        }
+        if (allowDrops && seedResult % 3 == 0) {
+            this.dropItem(Items.SPIDER_EYE, 1);
         }
         ci.cancel();
     }

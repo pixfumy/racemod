@@ -1,4 +1,4 @@
-package io.github.marinersfan824.racemod.mixin.rng;
+package io.github.marinersfan824.racemod.mixin.rng.mobspawn;
 
 import io.github.marinersfan824.racemod.RNGStreamGenerator;
 import io.github.marinersfan824.racemod.mixinterface.ILevelProperties;
@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.Random;
 
 @Mixin(SpawnerBlockEntityBehavior.class)
-public abstract class BlazeSpawnerMixin {
+public abstract class BlazeSpawnStandardizationMixin {
     @Shadow private String entityId;
 
     @Shadow public abstract World getWorld();

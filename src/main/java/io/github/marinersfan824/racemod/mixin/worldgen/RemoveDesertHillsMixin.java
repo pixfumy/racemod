@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Biome.class)
-public abstract class BiomeMixin {
+public abstract class RemoveDesertHillsMixin {
 
     @Mutable
     @Shadow @Final public static Biome DESERT_HILLS;

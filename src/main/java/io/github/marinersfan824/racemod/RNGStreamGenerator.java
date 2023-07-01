@@ -22,9 +22,9 @@ public class RNGStreamGenerator {
             {
             //  the first 3 seeds use the same XOR salt as sharpie did in the original forge racemod FeelsStrongMan
                 put("blazeRodSeed", worldSeed ^ 64711520272L);
-                put("blazeSpawnSeed", worldSeed ^ 0x5F7E6D8C9B0A1B2CL);
                 put("enderPearlSeed", worldSeed ^ 286265360L);
                 put("featherSeed", worldSeed ^ 1229781838466121744L);
+                put("blazeSpawnSeed", worldSeed ^ 0x5F7E6D8C9B0A1B2CL);
                 put("enderEyeSeed", worldSeed ^ 0x99A2B75BBL);
                 put("flintSeed", worldSeed ^ 0xF110301001B2L);
                 put("stringSeed", worldSeed ^ 0x120012034131L);

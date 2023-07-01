@@ -1,4 +1,4 @@
-package io.github.marinersfan824.racemod.mixin.worldgen;
+package io.github.marinersfan824.racemod.mixin.worldgen.stronghold;
 
 import io.github.marinersfan824.racemod.mixinterface.ISpiralStaircase;
 import net.minecraft.class_21;

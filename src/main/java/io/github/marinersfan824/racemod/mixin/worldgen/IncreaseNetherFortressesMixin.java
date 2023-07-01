@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.Random;
 
 @Mixin(NetherFortressStructure.class)
-public class NetherFortressStructureMixin {
+public class IncreaseNetherFortressesMixin {
 
     @Redirect(method = "shouldStartAt", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I", ordinal = 0))
     private int moreFortresses(Random instance, int bound) {

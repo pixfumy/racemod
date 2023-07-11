@@ -4,6 +4,7 @@
   "package": "io.github.marinersfan824.racemod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "command.CommandManagerMixin",
     "TitleScreenMixin",
     "rng.LevelPropertiesMixin",
     "rng.loot.BlazeEntityMixin",

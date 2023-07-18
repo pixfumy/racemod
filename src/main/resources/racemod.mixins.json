@@ -4,6 +4,7 @@
   "package": "io.github.marinersfan824.racemod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "command.CommandManagerMixin",
     "TitleScreenMixin",
     "rng.LevelPropertiesMixin",
     "rng.loot.BlazeEntityMixin",
@@ -17,8 +18,14 @@
     "rng.loot.SkeletonEntityMixin",
     "rng.loot.SpiderEntityMixin",
     "rng.mobspawn.BlazeSpawnStandardizationMixin",
+    "rng.mobspawn.DecreaseHorseSpawnsInPlainsMixin",
     "rng.mobspawn.DisableGhastsMixin",
     "rng.mobspawn.DisableTempleMobSpawnMixin",
+    "rng.mobspawn.ModifyAnimalWeightsMixin",
+    "rng.mobspawn.StopAnimalDuplicationMixin",
+    "rng.playerspawnstandardization.MinecraftServerMixin",
+    "rng.playerspawnstandardization.ServerPlayerEntityMixin",
+    "worldgen.IncreaseLavaPoolsMixin",
     "worldgen.RemoveDesertHillsMixin",
     "worldgen.RemoveFlowingLavaBelowY60Mixin",
     "worldgen.RemoveLavaLakesBelowY55Mixin",
@@ -27,7 +34,8 @@
     "worldgen.stronghold.StartPieceMixin",
     "worldgen.stronghold.LibraryMixin",
     "worldgen.stronghold.EndPortalRoomMixin",
-    "worldgen.IncreaseLavaPoolsMixin"
+    "worldgen.temple.IronWeightMixin",
+    "worldgen.temple.Minimum1IronPerChestMixin"
   ],
   "client": [
   ],

@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "io.github.marinersfan824.racemod.mixin",
+  "package": "net.pixfumy.racemod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "command.CommandManagerMixin",
@@ -28,7 +28,7 @@
     "worldgen.IncreaseLavaPoolsMixin",
     "worldgen.RemoveDesertHillsMixin",
     "worldgen.RemoveFlowingLavaBelowY60Mixin",
-    "worldgen.RemoveLavaLakesBelowY55Mixin",
+    "worldgen.RemoveLavaLakesBelowY57Mixin",
     "worldgen.RemoveRavineMixin",
     "worldgen.stronghold.SpiralStaircaseMixin",
     "worldgen.stronghold.StartPieceMixin",

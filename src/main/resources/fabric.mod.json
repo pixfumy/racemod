@@ -17,12 +17,12 @@
     "sources": ""
   },
 
-  "license": "CC0-1.0",
+  "license": "LGPL 3.0",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.marinersfan824.racemod.Main"
+      "net.pixfumy.racemod.Main"
     ]
   },
   "mixins": [

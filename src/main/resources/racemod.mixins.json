@@ -5,6 +5,9 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "command.CommandManagerMixin",
+    "dragon.StandardizeDragonInitialAngleMixin",
+    "dragon.StandardizeDragonPartRNGMixin",
+    "dragon.StandardizeDragonRNGMixin",
     "TitleScreenMixin",
     "rng.LevelPropertiesMixin",
     "rng.loot.BlazeEntityMixin",

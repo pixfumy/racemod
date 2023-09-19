@@ -12,6 +12,6 @@ public class IncreaseLavaPoolsMixin {
 
     @Redirect(method = "decorateChunk", at = @At(value = "INVOKE", target = "Ljava/util/Random;nextInt(I)I", ordinal = 4))
     private int moreLavapools(Random random, int bound) {
-        return random.nextInt(bound * 2) / 3;
+        return random.nextInt(bound) / 2;
     }
 }

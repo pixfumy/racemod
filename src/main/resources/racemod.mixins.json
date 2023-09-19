@@ -28,6 +28,7 @@
     "rng.mobspawn.StopAnimalDuplicationMixin",
     "rng.playerspawnstandardization.MinecraftServerMixin",
     "rng.playerspawnstandardization.ServerPlayerEntityMixin",
+    "StopRainAndThunderMixin",
     "worldgen.IncreaseLavaPoolsMixin",
     "worldgen.RemoveDesertHillsMixin",
     "worldgen.RemoveFlowingLavaBelowY60Mixin",

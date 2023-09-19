@@ -25,13 +25,15 @@ public class StopAnimalDuplicationMixin {
 
     /**
      * @reason using the world's random returns the same seed for subsequent calls because the seed gets reset by
-     * temple and village structure shouldStartAt() methods
+     * temple and village structure shouldStartAt() methods. Instead, choose the animal type based on the coords.
      */
     @Redirect(method = "spawnMobs", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/collection/Weighting;getRandom(Ljava/util/Random;Ljava/util/Collection;)Lnet/minecraft/util/collection/Weight;"))
     private static Weight stopAnimalDuplication(Random random, Collection pool, World world, Biome biome, int i, int j, int k, int l, Random random2) {
         // no need to do world.getServer().getWorld() nonsense, this is always the overworld, and it's always of type ServerWorld
-        long l1 = ((ILevelProperties)(world.getLevelProperties())).getRngStreamGenerator().getAndUpdateSeed("animalSpawnPosSeed");
-        random = new Random(l1);
-        return Weighting.getRandom(random, pool);
+        long seed = world.getSeed();
+        seed ^= i << 10;
+        seed ^= j << 20;
+        seed ^= -1798895202606485916L; // infume wr seed, of course
+        return Weighting.getRandom(new Random(seed), pool);
     }
 }

@@ -17,7 +17,6 @@ public abstract class TitleScreenMixin {
     public void changeSplashText(CallbackInfo ci) {
         String[] splashes = {"Don't bridge with sand!",
                 "Doug has plot armor!",
-                "Shh! Illumina doesn't know ledge yet!",
                 "Fall tower is not better!",
                 "Boat is meta.",
                 "One quadrant that I can dig in!",
@@ -31,7 +30,6 @@ public abstract class TitleScreenMixin {
                 "Why do Doug The Pig have 4 mods?",
                 "They did it! They broke the record live!",
                 "Why is Silliest in creative mode?",
-                "and Illumina finds a pearl on the floor!",
                 "@Skyrota can you get rid of caves?",
                 "There's baby chickens at spawn!",
                 "Don't forget the spider protection!",
@@ -52,11 +50,9 @@ public abstract class TitleScreenMixin {
                 "Danger Perch!",
                 "Subscribe to Cscuile!",
                 "Taro7",
-                "ILLUMINA1337在MINECRAFT1.7戰役中F3得到Scandal",
                 "Ma porko dio di monio!",
                 "Che cazzo se dici, Crafterdark?",
                 "Bad strategy.",
-                "Regardless of who wins, we need to beat Illumina.",
                 "Find the EDSA!",
                 "Forge beds do more damage!",
                 "Max is doing all versions!",
@@ -65,7 +61,6 @@ public abstract class TitleScreenMixin {
                 "After this match, let's do Snow Seed.",
                 "Hi Cubex!",
                 "And guess what? A 3 eye.",
-                "illU",
                 "xvsxvSNGgd",
                 "28,270,471 69 -25,368,883"
         };

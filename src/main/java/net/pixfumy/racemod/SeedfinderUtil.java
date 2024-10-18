@@ -12,7 +12,7 @@ public class SeedfinderUtil {
     public static void tellPlayerCurrentRates(World world) {
         RNGStreamGenerator main = ((ILevelProperties)world.getLevelProperties()).getRngStreamGenerator();
         RNGStreamGenerator dummy = new RNGStreamGenerator();
-        dummy.rngSeeds = new HashMap() {
+        dummy.rngSeeds = new HashMap<String, Long>() {
             {
                 put("blazeRodSeed", main.getSeed("blazeRodSeed"));
                 put("enderPearlSeed", main.getSeed("enderPearlSeed"));

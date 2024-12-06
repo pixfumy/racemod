@@ -16,7 +16,8 @@ A mod for 1.7 ranked that makes major sources of RNG consistent between differen
 - Desert Hills are replaced by normal desert to make terrain flatter
 - Ghast spawns are disabled
 - Animal weights are tweaked to make chickens more common
-- Temple loot is modified so that each temple has at minimum 4 iron (1 per chest) 
+- Temple loot is modified so that each temple has at minimum 4 iron (1 per chest)
+- Tower spawns are (mostly) standardized
 
 ## Commands for seedfinders
 

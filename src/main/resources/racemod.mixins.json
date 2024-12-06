@@ -25,7 +25,7 @@
     "rng.mobspawn.DecreaseHorseSpawnsInPlainsMixin",
     "rng.mobspawn.DisableGhastsMixin",
     "rng.mobspawn.DisableTempleMobSpawnMixin",
-    "rng.mobspawn.ModifyAnimalWeightsMixin",
+    "rng.mobspawn.ModifyMobWeightsMixin",
     "rng.mobspawn.StopAnimalDuplicationMixin",
     "rng.mobspawn.TowerSpawnStandardizationMixin",
     "rng.playerspawnstandardization.MinecraftServerMixin",

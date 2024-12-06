@@ -74,6 +74,27 @@ public class TowerSpawnStandardizationMixin {
         return result;
     }
 
+    /**
+     * @Author Eliotex
+     */
+    @Inject(method = "canSpawnAt", at = @At("HEAD"), cancellable = true)
+    private static void onCanSpawnAt(EntityCategory category, World world, int x, int y, int z, CallbackInfoReturnable<Boolean> cir) {
+        boolean playerNearby = false;
+        for (Object object : world.playerEntities) {
+            PlayerEntity player = (PlayerEntity) object;
+            double distanceSquared = player.squaredDistanceTo(x + 0.5, y + 0.5, z + 0.5);
+
+            if (distanceSquared <= 128 * 128) {
+                playerNearby = true;
+                break;
+            }
+        }
+
+        if (!playerNearby) {
+            cir.setReturnValue(false);
+        }
+    }
+
     @Inject(method = "tickSpawners", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/world/ServerWorld;spawnEntity(Lnet/minecraft/entity/Entity;)Z"))
     private void onSpawned(ServerWorld world, boolean spawnAnimals, boolean spawnMonsters, boolean bl, CallbackInfoReturnable<Integer> cir, @Local EntityCategory category, @Local MobEntity entity, @Local LocalRef<SpawnEntry> spawnEntryLocalRef) {
         if (shouldTowerStandardizeWork(world, category)) {

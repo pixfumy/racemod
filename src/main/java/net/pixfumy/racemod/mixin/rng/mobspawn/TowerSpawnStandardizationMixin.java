@@ -79,6 +79,9 @@ public class TowerSpawnStandardizationMixin {
      */
     @Inject(method = "canSpawnAt", at = @At("HEAD"), cancellable = true)
     private static void onCanSpawnAt(EntityCategory category, World world, int x, int y, int z, CallbackInfoReturnable<Boolean> cir) {
+        if (!shouldTowerStandardizeWork((ServerWorld) world, category)) {
+            return;
+        }
         boolean playerNearby = false;
         for (Object object : world.playerEntities) {
             PlayerEntity player = (PlayerEntity) object;
@@ -115,7 +118,7 @@ public class TowerSpawnStandardizationMixin {
     }
 
     @Unique
-    private boolean shouldTowerStandardizeWork(ServerWorld world, EntityCategory category) {
+    private static boolean shouldTowerStandardizeWork(ServerWorld world, EntityCategory category) {
         if (category != EntityCategory.MONSTER) return false;
         for (Object object : world.playerEntities) {
             PlayerEntity player = (PlayerEntity) object;
